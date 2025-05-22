@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.top-bar {
+  background-color: #cc0000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+  font-size: 14px;
+}
+
+.top-bar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.top-bar .top-left a:last-child,
+.top-bar .top-right a:last-child {
+  margin-right: 0;
+}
+
+.top-right a {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.promo-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.promo-left h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #cc0000;
+}
+
+.promo-center p {
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+
+.promo-right .promo-button {
+  background-color: #cc0000;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.main-menu a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-right: 5px;
+  border: 1px solid transparent;
+}
+
+.main-menu a.active,
+.main-menu a:hover {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-icon {
+  margin-left: auto;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+}
+
+
+.articles {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 20px;
+}
+
+.article-card {
+  width: 32%;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 10px;
+  position: relative;
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+}
+
+.category {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #cc0000;
+  color: white;
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.article-title {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.4;
+}
