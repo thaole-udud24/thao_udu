@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide trinh chieu</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: aqua;
+        }
+        h2{
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        .slideshow-container{
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+    </style>
+    <div class ="slideshow-container">
+        <img id="slide" src="a1.png" alt="Slide Image" >
+
+    </div>
+    <div class="buttons">
+        <button onclick="prevSlide()">Truoc</button>
+        <button onclick="nextSlide()">Sau</button>
+    </div>
+    <script>
+        const images=["a1.png","a2.png","a3.png"];
+        let current =0 ;
+        function showSide(){
+            const slide = document.getElementById("slide");
+            slide.src=images[index];
+        }
+        function nextSlide(){
+            current++;
+            if(current >= images.length){
+                current=0;
+            }
+            showslide();
+        }
+        function prevSlide(){
+            current--;
+            if(current<0){
+                current=images.length -1;
+
+            }
+            showSide();
+        }
+    </script>
+</body>
+</html>
