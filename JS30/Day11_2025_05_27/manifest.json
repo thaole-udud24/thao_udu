@@ -1,0 +1,16 @@
+{
+    "manifest_version":3,
+    "name":"Dan tri",
+    "version":"1.0",
+    "description":"Dan tri",
+    "permissions":[
+        {
+            "matches":["https://dantri.com.vn"],
+            "js":["index.js"]
+
+        }
+    ],
+    "icons":{
+        "48":"a3.png"
+    }
+}
