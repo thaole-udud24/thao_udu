@@ -1,0 +1,45 @@
+body{
+    font-family:'Times New Roman', Times, serif;
+    text-align:center;
+    padding: 20px;
+}
+.form-container{
+    display: inline-block;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgb(245, 247, 247);
+    margin-bottom: 20px;
+}
+.form-container  input{
+    width: 100%;
+    padding: 8px ;
+    margin: 8px 0;
+    box-sizing: border-box;
+
+}
+.form-container button{
+    background-color: #5dda7a;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+table{
+    width:80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+}
+table,th,td{
+    border: 1px solid #ccc;
+}
+th,td{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    background: #f2f2f2;
+}
