@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    button {
+      margin: 2px;
+    }
+    </style>
+</head>
+<body>
+    <h2> Quản lí sản phẩm </h2>
+    ID: <input type ="text" id="idInput">
+    Tên: <input type ="text" id="nameInput">
+    Gía: <input type="number" id="priceInput">
+    Số lượng:<input type="number" id="quantityInput">
+    <button onclick="addProduct()">Thêm </button>
+    <br><br>
+    <table id="productTable" >
+        <thead>
+            <tr>
+              <th>ID</th> <th>Tên</th> <th>Gía</th><th>Số lượng </th> <th>Tổng giá trị </th><th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id ="totalValue"></p>
+    <p id="mostExpensive"></p>
+    <script>
+        class Product{
+            constructor(id,name,price,quantity){
+                this.id=id;
+                this.name=name;
+                this.price=price;
+                this.quantity=quantity;
+
+            }
+            getTotalValue(){
+                return this.price * this.quantity;
+            }
+        }
+        let products=[];
+        function addProduct(){
+            let id = document.getElementById("idInput").value;
+            let name = document.getElementById("NameInput").value;
+            let price = document.getElementById("priceInput").value;
+            let quantity = document.getElementById("quantityInput").value;
+        if (products.some(p => p.id ===id)) {
+            alert("ID đã tồn tại");
+            return;
+
+        }
+        let product =new Product(id,name,price,quantity);
+        products.push(product);
+        renderTable();
+        function editProduct(id){
+
+                let product=products.find(p => p.id ===id);
+            
+        }
+        function deletProduct(id){
+            products = products.filter(p => p.id !== id);
+            renderTable();
+        }
+        function editProduct(id){
+            let product = products.find(p => p.id === id);
+            document.getElementById("idInput").value = product.id;
+            document.getElementById("nameInput").value =product.name;
+            document.getElementById("priceInput").value = product .price;
+            document.getElementById("quantityInput").value = product.quantity;
+            deletProduct(id);
+        }
+        function renderTable(){
+            let tbody = document.querySelector("#productTable tbody");
+            tbody.innerHTML ="";
+
+        }
+        products.forEach(p =>{
+            let row=document.createElement("tr");
+            row.innerHTML =`
+                <td>${p.id}</td>
+                <td>${p.name}</td>
+                <td>${p.price.tolocaleString()}</td>
+                <td>${p.quantity}</td>
+                <td>${p.getTotalValue().tolocaleString()}</td>
+                <td>
+                    <button onclick="editProduct('${p.id}')">Sua </button>
+                    <button onclick="deletProduct('${p.id}')">Xoa </button>
+
+                </td>
+                `;
+             tbody.appendChild(row);
+             
+
+        });
+         updateSummary();
+    }
+    function updateSummary(){
+        let total=products.reduce((sum,p)=> sum + p.getTotalValue(),0);
+        document.getElementById("totalValue").innerText =`Tong gia tri ton kho :${total.tolocaleString()} VND`;
+        if(products.length > 0){
+            let maxProduct = products.reduce((a,b) => a.price > b.price ? a : b);
+        }
+    }
+    </script>
+</body>
+</html>
