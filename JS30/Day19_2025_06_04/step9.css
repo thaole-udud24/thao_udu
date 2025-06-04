@@ -1,0 +1,77 @@
+.nutrition-goal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.nutrition-goal-image img {
+  width: 350px;
+  height: 350px;
+}
+
+.nutrition-goal-content {
+  max-width: 500px;
+}
+
+.nutrition-goal-title {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.nutrition-goal-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.nutrition-goal-info p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.nutrition-goal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nutrition-goal-list li {
+  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.dot.yellow {
+  background-color: #f7c948;
+}
+
+.dot.blue {
+  background-color: #5fb0f2;
+}
+
+.dot.purple {
+  background-color: #9b5de5;
+}
+
+.edit-goal-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #a7e8fc;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
