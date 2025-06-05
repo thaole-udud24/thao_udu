@@ -1,0 +1,36 @@
+.step10-card{
+    display: flex;
+    align-items: flex-end;
+    background-color: #fdfdfd;
+    padding:30px;
+    text-align: left;
+    gap: 40px;
+    margin-left: 120px;
+
+}
+.step10-icon {
+    width: 220px;
+    height: 220px;
+    margin-right: 100px;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+.step10-icon img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+.step10-info {
+    flex-grow: 1;
+    margin-top: 30px;
+}
+.step10-info h2 {
+    font-size:28px;
+    color: #333;
+}
+.step-info p{
+    font-size:18px;
+    color: #555;
+    text-align: justify;
+    line-height: 1.6;
+}
