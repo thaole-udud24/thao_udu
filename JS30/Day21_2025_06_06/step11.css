@@ -1,0 +1,30 @@
+.meal-selection-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin:auto;
+    font-family: sans-serif;
+}
+.meal-selection-image img{
+    width: 250px;
+    height: 250px;
+    margin-left: 0px;
+    margin-top: 40px;
+}
+.meal-selection-content{
+    max-width: 500px;
+}
+.meal-selection-title {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.meal-list{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+.meal-item
