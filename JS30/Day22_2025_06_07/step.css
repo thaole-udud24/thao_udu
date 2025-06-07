@@ -1,0 +1,46 @@
+.meal-plan{
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.meal-plan h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+
+}
+.meal-plan.subtitle{
+    font-size:14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.category-section h3{
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.category-section.description{
+    font-size:14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+.meal-plan h2{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.meal-plan.subtitle{
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+
+}
+.category-section h3{
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+.food-card{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap : 16px;
+    margin-top: 30px;
+}
