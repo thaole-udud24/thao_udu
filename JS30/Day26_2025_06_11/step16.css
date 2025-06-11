@@ -1,0 +1,25 @@
+.completion-container{
+    text-align: center;
+    padding : 3rem 1 rem ;
+    color : #333;
+}
+.completion-img{
+    width: 300px;
+    max-width: 100%;
+    margin: 2rem auto;
+    display: block;
+}
+.completion-btn{
+    margin-top: 2rem;
+    padding : 12px 24px;
+    background-color: rgb(253, 180, 120);
+    color: white;
+    border:none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.completion-btn:hover{
+    background-color: #e7643a;
+}
