@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mindthera - Blog</title>
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px 50px;
+      background-color: white;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .logo .highlight {
+      color: #4CAF50; /* Màu tươi hơn */
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    .start-btn {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    .start-btn:hover {
+      background-color: #3a9b42;
+    }
+
+    /* Blog Header */
+    .blog-header {
+      background: linear-gradient(to right, #6fd190, #c2e8cf);
+      color: white;
+      padding: 110px 40px 20px;
+      text-align: left;
+    }
+
+    .blog-header h1 {
+      font-size: 32px; /* Thu nhỏ lại */
+      margin-bottom: 8px;
+    }
+
+    .breadcrumbs {
+      font-size: 16px;
+      color: #f0f0f0;
+    }
+
+    /* Blog Grid */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+    }
+
+    .blog-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-content .tag {
+      display: inline-block;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .blog-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .blog-content p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Leaf Flower Animation */
+    .team-leaf {
+      position: absolute;
+      bottom: -10px;
+      right: -200px;
+      width: 300px;
+      height: 300px;
+      animation: floatUpDown 4s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes floatUpDown {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .blog-header h1 {
+        font-size: 28px;
+      }
+
+      .team-leaf {
+        right: 10px;
+        bottom: -10px;
+        width: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">mind<span class="highlight">thera</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About Us</a>
+      <a href="#">Study Case</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#footer">Contact</a>
+      <button class="start-btn">Start</button>
+    </nav>
+  </header>
+
+  <!-- Blog Header -->
+  <section class="blog-header">
+    <h1>Blog</h1>
+    <p class="breadcrumbs">Home > Blog</p>
+  </section>
+
+  <!-- Blog Cards -->
+  <section class="blog-grid">
+    <!-- Ảnh hoa -->
+    <img src="img/hoa.png" alt="Leaf Decor" class="team-leaf" />
+
+    <div class="blog-card">
+      <img src="https://www.epochtimesviet.com/wp-content/uploads/2021/04/Screenshot_5-e1617784719849.png" alt="Blog 1" />
+      <div class="blog-content">
+        <div class="tag">TIPS & TRICKS</div>
+        <h3>The Power of Positive Thinking</h3>
+        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore...</p>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Dy5BLRNdGgyiM19rYyndzpI-9CB6lqwsHe6fqiLYNqw4q6z56TE0nVCZcBpnn0dOL1s&usqp=CAU" alt="Blog 2" />
+      <div class="blog-content">
+        <div class="tag">TIPS & TRICKS</div>
+        <h3>Understanding the Roots of Anxiety</h3>
+        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore...</p>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="https://cdn.nhathuoclongchau.com.vn/unsafe/800x0/filters:quality(95)/https://cms-prod.s3-sgn09.fptcloud.com/nen_tap_the_duc_bao_nhieu_phut_moi_ngay_1_7e090bb167.jpg" alt="Blog 3" />
+      <div class="blog-content">
+        <div class="tag">TIPS & TRICKS</div>
+        <h3>The Psychology of Procrastination</h3>
+        <p>Dolore officia sint incididunt non excepteur ea mollit commodo ut enim reprehenderit cupidatat labore...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll effect -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
